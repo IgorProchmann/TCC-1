@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Enquetes Online - Enquetes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Enquete Atual</h1>
+            <div class="user-icon" onclick="openProfile()">
+                <i class="fas fa-user"></i>
+            </div>
+        </div>
+
+        <div class="polls-container">
+            <p>Qual é a sua cor favorita?</p>
+
+            <form id="pollForm">
+                <label for="colorRed">
+                    <input type="radio" id="colorRed" name="color" value="red"> Vermelho
+                </label>
+
+                <label for="colorBlue">
+                    <input type="radio" id="colorBlue" name="color" value="blue"> Azul
+                </label>
+
+                <label for="colorGreen">
+                    <input type="radio" id="colorGreen" name="color" value="green"> Verde
+                </label>
+
+                <button type="button" onclick="vote()">Votar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

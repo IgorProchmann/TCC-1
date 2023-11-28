@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Enquetes Online - Página Principal</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Bem-vindo à Página Principal</h1>
+            <div class="user-profile" onclick="toggleProfileOptions()">
+                <i class="fas fa-user"></i>
+                <div class="profile-options" id="profileOptions">
+                    <button onclick="logout()">Deslogar</button>
+                    <button onclick="openProfile()">Acessar Perfil</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h2>Exemplos de Enquetes</h2>
+            <!-- Exemplos de enquetes podem ser adicionados aqui -->
+            <div class="example-polls">
+                <div class="poll">
+                    <p>Qual é a sua cor favorita?</p>
+                    <button onclick="vote('red')">Vermelho</button>
+                    <button onclick="vote('blue')">Azul</button>
+                    <button onclick="vote('green')">Verde</button>
+                </div>
+
+                <!-- Adicione mais exemplos de enquetes conforme necessário -->
+
+            </div>
+            
+            <!-- Formulário para criar nova enquete -->
+            <form id="createPollForm" onsubmit="createNewPoll(event)">
+                <label for="newPollQuestion">Criar Nova Enquete:</label>
+                <input type="text" id="newPollQuestion" name="newPollQuestion" required>
+                <button type="submit">Criar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
